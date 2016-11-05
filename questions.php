@@ -8,9 +8,9 @@ $category='';
  if(!empty($_POST['name'])){
      $name=$_POST['name'];
      $category=$_POST['category'];
-     mysql_query("INSERT INTO users (id, user_name,score,category_id)VALUES (NULL,'$name',0,'$category')") or die(mysql_error());
+     mysqli_query($con,"INSERT INTO users (id, user_name,score,category_id)VALUES (NULL,'$name',0,'$category')");
      $_SESSION['name']= $name;
-     $_SESSION['id'] = mysql_insert_id();
+     $_SESSION['id'] = mysqli_insert_id($con);
  }
 $category=$_POST['category'];
 if(!empty($_SESSION['name'])){
@@ -51,10 +51,10 @@ if(!empty($_SESSION['name'])){
 				<hr>
 				<form class="form-horizontal" role="form" id='login' method="post" action="result.php">
 					<?php
-					$res = mysql_query("select * from questions where category_id=$category ORDER BY RAND()") or die(mysql_error());
-                    $rows = mysql_num_rows($res);
+					$res = mysqli_query($con,"select * from questions where category_id=$category ORDER BY RAND()") or die("3");
+                    $rows = mysqli_num_rows($res);
 					$i=1;
-                while($result=mysql_fetch_array($res)){?>
+                while($result=mysqli_fetch_array($res)){?>
 
 
                     <?php if($i==1){?>
@@ -130,11 +130,11 @@ if(isset($_POST[1])){
    $keys=array_keys($_POST);
    $order=join(",",$keys);
 
-   $response=mysql_query("select id,answer from questions where id IN($order) ORDER BY FIELD(id,$order)")   or die(mysql_error());
+   $response=mysqli_query($con, "select id,answer from questions where id IN($order) ORDER BY FIELD(id,$order)")   or die("4");
    $right_answer=0;
    $wrong_answer=0;
    $unanswered=0;
-   while($result=mysql_fetch_array($response)){
+   while($result=mysqli_fetch_array($response)){
        if($result['answer']==$_POST[$result['id']]){
                $right_answer++;
            }else if($_POST[$result['id']]==5){

@@ -1,12 +1,10 @@
 <?php
 
-define('BASE_PATH','http://localhost/');
-define('DB_HOST', 'localhost');
-define('DB_NAME', '139996');
-define('DB_USER','139996');
-define('DB_PASSWORD','Hbv776677');
+define('BASE_PATH','http://192.168.10.10');
+define('DB_HOST', '192.168.10.10');
+define('DB_NAME', 'INT1000');
+define('DB_USER','homestead');
+define('DB_PASSWORD','secret');
 
-$con=mysql_connect(DB_HOST,DB_USER,DB_PASSWORD) or die("Failed to connect to MySQL: " . mysql_error());
-$db=mysql_select_db(DB_NAME,$con) or die("Failed to connect to MySQL: " . mysql_error());
-
+$con=mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME) or die("Failed to connect to database server: ");
 ?>

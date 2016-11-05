@@ -1,7 +1,7 @@
 <?php
 
-    session_start();
-    session_destroy();
+session_start();
+session_destroy();
 
-    print ("<META HTTP-EQUIV='refresh' content='0;URL=innlogging.php'>");
+print ("<META HTTP-EQUIV='refresh' content='0;URL=innlogging.php'>");
 ?>

@@ -14,9 +14,9 @@ if(!empty($_SESSION['name'])){
    $order=join(",",$keys);
 
 
-   $response=mysql_query("select id,answer from questions where id IN($order) ORDER BY FIELD(id,$order)")   or die(mysql_error());
+   $response=mysqli_query($con,"select id,answer from questions where id IN($order) ORDER BY FIELD(id,$order)") or die("5");
 
-   while($result=mysql_fetch_array($response)){
+   while($result=mysqli_fetch_array($response)){
        if($result['answer']==$_POST[$result['id']]){
                $right_answer++;
            }else if($_POST[$result['id']]==5){
@@ -27,7 +27,7 @@ if(!empty($_SESSION['name'])){
            }
    }
    $name=$_SESSION['name'];
-   mysql_query("update users set score='$right_answer' where user_name='$name'");
+   mysqli_query($con,"update users set score='$right_answer' where user_name='$name'");
 ?>
 <!DOCTYPE html>
 <html>
@@ -36,7 +36,6 @@ if(!empty($_SESSION['name'])){
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link href="css/style.css" rel="stylesheet" media="screen">
-
     </head>
     <body>
         <header>
@@ -45,7 +44,6 @@ if(!empty($_SESSION['name'])){
                 if(!empty($_SESSION['name'])){
                     echo $_SESSION['name'];
                 }?>
-
             </p>
         </header>
         <div class="container result">
@@ -61,22 +59,17 @@ if(!empty($_SESSION['name'])){
                             <img src="image/cat.GIF" class="img-responsive"/>
                     </div>
                   </div>
-
                   <div class="col-xs-6 col-sm-3 col-lg-3">
                      <a href="<?php echo BASE_PATH;?>" class='btn btn-success'>Start ny test!</a>
                      <a href="<?php echo BASE_PATH.'logout.php';?>" class='btn btn-success'>Logg ut</a>
-
                        <div style="margin-top: 30%">
                         <p>Totalt riktig svar : <span class="answer"><?php echo $right_answer;?></span></p>
                         <p>Totalt feil svar : <span class="answer"><?php echo $wrong_answer;?></span></p>
                         <p>Totalt usvart : <span class="answer"><?php echo $unanswered;?></span></p>
                        </div>
-
                    </div>
-
             </div>
             <div class="row">
-
             </div>
         </div>
         <footer>
@@ -86,11 +79,7 @@ if(!empty($_SESSION['name'])){
         </footer>
         <script src="js/jquery-1.10.2.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-
         <script src="js/jquery.validate.min.js"></script>
-
-
-
     </body>
 </html>
 <?php }else{
