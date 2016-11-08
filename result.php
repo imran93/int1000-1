@@ -14,7 +14,7 @@ if(!empty($_SESSION['name'])){
     $order=join(",",$keys);
 
 
-    $response=mysqli_query($con,"select id,answer from questions where id IN($order) ORDER BY FIELD(id,$order)") or die("5");
+    $response=mysqli_query($con,"select id,answer from questions where id IN($order) ORDER BY FIELD(id,$order);") or die("5");
 
     while($result=mysqli_fetch_array($response)){
         if($result['answer']==$_POST[$result['id']]){
@@ -27,7 +27,7 @@ if(!empty($_SESSION['name'])){
         }
     }
     $name=$_SESSION['name'];
-    mysqli_query($con,"update users set score='$right_answer' where user_name='$name'");
+    mysqli_query($con,"update users set score='$right_answer' where user_name='$name';");
     ?>
     <!DOCTYPE html>
     <html>
