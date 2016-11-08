@@ -73,11 +73,13 @@ require 'db-tilkobling.php';
 		</div>
 	</div>
 </div>
-<footer>
-	<p class="text-center" id="foot">
-		&copy; <a>E-Learning </a>2016
-	</p>
-</footer>
+<div class="footer navbar-fixed-bottom">
+	<footer>
+		<p class="text-center" id="foot">
+			&copy; <a>E-Learning </a>2016
+		</p>
+	</footer>
+</div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery-1.10.2.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

@@ -99,11 +99,13 @@ if(!empty($_SESSION['name'])){
             </form>
         </div>
     </div>
-    <footer>
-        <p class="text-center" id="foot">
-            &copy; <a>E-Learning </a>2016
-        </p>
-    </footer>
+    <div class="footer navbar-fixed-bottom">
+        <footer>
+            <p class="text-center" id="foot">
+                &copy; <a>E-Learning </a>2016
+            </p>
+        </footer>
+    </div>
 
 
     <?php

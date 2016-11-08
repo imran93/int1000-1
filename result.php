@@ -69,14 +69,16 @@ if(!empty($_SESSION['name'])){
                 </div>
             </div>
         </div>
-        <div class="row">
-        </div>
+        <!--        <div class="row">-->
+        <!--        </div>-->
     </div>
-    <footer>
-        <p class="text-center" id="foot">
-            &copy; <a>E-Learning </a>2016
-        </p>
-    </footer>
+    <div class="footer navbar-fixed-bottom">
+        <footer>
+            <p class="text-center" id="foot">
+                &copy; <a>E-Learning </a>2016
+            </p>
+        </footer>
+    </div>
     <script src="js/jquery-1.10.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
@@ -84,6 +86,6 @@ if(!empty($_SESSION['name'])){
     </html>
 <?php }else{
 
- header( 'Location: index.php' ) ;
+    header( 'Location: index.php' ) ;
 
 }?>
