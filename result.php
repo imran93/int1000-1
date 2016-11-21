@@ -56,7 +56,7 @@ if(!empty($_SESSION['name'])){
         <div class="row">
             <div class="col-xs-18 col-sm-9 col-lg-9">
                 <div class='result-logo1'>
-                    <img src="image/cat.GIF" class="img-responsive"/>
+                    <img src="image/raw.gif" class="img-responsive"/>
                 </div>
             </div>
             <div class="col-xs-6 col-sm-3 col-lg-3">

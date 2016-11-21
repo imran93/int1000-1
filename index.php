@@ -23,7 +23,7 @@ require 'db-tilkobling.php';
     <div class="row">
         <div class="col-xs-14 col-sm-6 col-lg-5">
             <div class='image'>
-                <img src="image/math.jpg" class="img-responsive"/>
+                <img src="image/math.gif" class="img-responsive"/>
             </div>
         </div>
         <div class="col-xs-10 col-sm-5 col-lg-5">
