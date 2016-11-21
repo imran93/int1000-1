@@ -46,8 +46,10 @@ footer p{padding-top:50px;}
 	font-weight: 300;
 	font-size: larger;
 }
-.result {
-	height: 452px;
+.wrong{
+	color: red;
+	font-weight: 300;
+	font-size: larger;
 }
 .form-horizontal {
 	margin-bottom: 0px;

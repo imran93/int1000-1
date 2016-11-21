@@ -34,7 +34,7 @@ if(!empty($_SESSION['name'])){
     <head>
         <title>E-Learning</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link href="css/style.css" rel="stylesheet" media="screen">
     </head>
     <body>
@@ -46,14 +46,13 @@ if(!empty($_SESSION['name'])){
             }?>
         </p>
     </header>
-    <div class="container result">
+    <div class="container">
         <div class="row">
             <h2 class="text-center">
                 Gratulerer du har fullført testen!
             </h2>
         </div>
         <hr>
-<!--        <div class="row">-->
             <div class="col-md-6">
                 <div class='result-logo1'>
                     <img src="image/raw.gif" class="img-responsive"/>
@@ -63,7 +62,7 @@ if(!empty($_SESSION['name'])){
                 <a href="<?php echo BASE_PATH;?>" class='btn btn-success'>Start ny test!</a>
                 <a href="<?php echo BASE_PATH.'logout.php';?>" class='btn btn-success'>Logg ut</a>
                     <p>Totalt riktig svar : <span class="answer"><?php echo $right_answer;?></span></p>
-                    <p>Totalt feil svar : <span class="answer"><?php echo $wrong_answer;?></span></p>
+                    <p>Totalt feil svar : <span class="wrong"><?php echo $wrong_answer;?></span></p>
                     <p>Totalt usvart : <span class="answer"><?php echo $unanswered;?></span></p>
             </div>
     </div>
