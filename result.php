@@ -53,24 +53,19 @@ if(!empty($_SESSION['name'])){
             </h2>
         </div>
         <hr>
-        <div class="row">
-            <div class="col-xs-18 col-sm-9 col-lg-9">
+<!--        <div class="row">-->
+            <div class="col-md-6">
                 <div class='result-logo1'>
                     <img src="image/raw.gif" class="img-responsive"/>
                 </div>
             </div>
-            <div class="col-xs-6 col-sm-3 col-lg-3">
+            <div class="col-md-6">
                 <a href="<?php echo BASE_PATH;?>" class='btn btn-success'>Start ny test!</a>
                 <a href="<?php echo BASE_PATH.'logout.php';?>" class='btn btn-success'>Logg ut</a>
-                <div style="margin-top: 30%">
                     <p>Totalt riktig svar : <span class="answer"><?php echo $right_answer;?></span></p>
                     <p>Totalt feil svar : <span class="answer"><?php echo $wrong_answer;?></span></p>
                     <p>Totalt usvart : <span class="answer"><?php echo $unanswered;?></span></p>
-                </div>
             </div>
-        </div>
-        <!--        <div class="row">-->
-        <!--        </div>-->
     </div>
     <div class="footer navbar-fixed-bottom">
         <footer>
