@@ -3,5 +3,5 @@
 session_start();
 session_destroy();
 
-print ("<META HTTP-EQUIV='refresh' content='0;URL=innlogging.php'>");
+print ("<META HTTP-EQUIV='refresh' content='0;URL=index.php'>");
 ?>

@@ -60,7 +60,7 @@ if(!empty($_SESSION['name'])){
             </div>
             <div class="col-md-6">
                 <a href="<?php echo BASE_PATH;?>" class='btn btn-success'>Start ny test!</a>
-                <a href="<?php echo BASE_PATH.'logout.php';?>" class='btn btn-success'>Logg ut</a>
+                <a href="<?php echo BASE_PATH.'/logout.php';?>" class='btn btn-success'>Logg ut</a>
                     <p>Totalt riktig svar : <span class="answer"><?php echo $right_answer;?></span></p>
                     <p>Totalt feil svar : <span class="wrong"><?php echo $wrong_answer;?></span></p>
                     <p>Totalt usvart : <span class="answer"><?php echo $unanswered;?></span></p>
